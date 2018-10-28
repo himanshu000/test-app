@@ -1,10 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './login/login.component';
+import { CommonModule } from '@angular/common';
 import {
   MatInputModule,
   MatButtonModule,
@@ -42,32 +37,28 @@ import {
   MatTooltipModule,
   MatTreeModule
 } from '@angular/material';
+import { NavComponent } from './nav.component';
+import { NavRoutingModule } from './nav-routing.module';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { ViewUserComponent } from '../dashboard/view-user/view-user.component';
+import { EditUserComponent } from '../dashboard/edit-user/edit-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CdkTableModule } from '@angular/cdk/table';
-import { CdkTreeModule } from '@angular/cdk/tree';
-import { ScrollingModule } from '@angular/cdk/scrolling';
-import { LayoutModule } from '@angular/cdk/layout';
-import { AuthGuard } from './auth.guard';
-import { NavModule } from './nav/nav.module';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent
-  ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    CdkTableModule,
-    CdkTreeModule,
+    CommonModule,
+    NavRoutingModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    MatNativeDateModule,
+    MatIconModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
-    MatButtonModule,
     MatButtonToggleModule,
-    MatCardModule,
     MatCheckboxModule,
     MatChipsModule,
     MatStepperModule,
@@ -76,17 +67,12 @@ import { HttpClientModule } from '@angular/common/http';
     MatDividerModule,
     MatExpansionModule,
     MatGridListModule,
-    MatIconModule,
-    MatInputModule,
     MatListModule,
     MatMenuModule,
-    MatNativeDateModule,
     MatPaginatorModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
-    MatRadioModule,
     MatRippleModule,
-    MatSelectModule,
     MatSidenavModule,
     MatSliderModule,
     MatSlideToggleModule,
@@ -97,18 +83,13 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    ScrollingModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatRadioModule,
-    MatCardModule,
-    ReactiveFormsModule,
-    LayoutModule,
-    NavModule,
-    HttpClientModule
+    ReactiveFormsModule
   ],
-  providers: [AuthGuard],
-  bootstrap: [AppComponent]
+  declarations: [
+    NavComponent,
+    DashboardComponent,
+    ViewUserComponent,
+    EditUserComponent
+  ]
 })
-export class AppModule { }
+export class NavModule { }

@@ -1,0 +1,86 @@
+<div class="example-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>User</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Name" value="{{user?.name}}" disabled>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Username" value="{{user?.username}}" disabled>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Email" value="{{user?.email}}" disabled>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Phone" value="{{user?.phone}}" disabled>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Website" value="{{user?.website}}" disabled>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col address">
+          <mat-card-subtitle>Address</mat-card-subtitle>
+          <div class="row">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Street" value="{{user?.address?.street}}" disabled>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Suite" value="{{user?.address?.suite}}" disabled>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="City" value="{{user?.address?.city}}" disabled>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Zipcode" value="{{user?.address?.zipcode}}" disabled>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col company">
+          <mat-card-subtitle>Company</mat-card-subtitle>
+          <div class="row">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Name" value="{{user?.company?.name}}" disabled>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="CatchPhrase" value="{{user?.company?.catchPhrase}}" disabled>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="BS" value="{{user?.company?.bs}}" disabled>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button  class="btn-pos" mat-raised-button color="primary" type="button" (click)="back()">Ok</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
